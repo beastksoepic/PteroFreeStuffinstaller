@@ -109,7 +109,8 @@ export default ({ className }: WithClassname) => {
                 </ModalMask>
             </Fade>
             <SpinnerOverlay visible={loading} size={'large'} fixed>
-                <span css={tw`mt-4`}>({upload.progress}% Uploaded)<br>{bytesToHuman(upload.size)} / {bytesToHuman(upload.totalSize)}</span>
+                <span css={tw`mt-4`}>{bytesToHuman(upload.size)} / {bytesToHuman(upload.totalSize)}</span>
+                <span css={tw`mt-4`}>({upload.progress}% Uploaded)</span>
             </SpinnerOverlay>
             <input
                 type={'file'}
