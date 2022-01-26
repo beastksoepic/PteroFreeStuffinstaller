@@ -22,11 +22,9 @@ const InnerContainer = styled.div`
 export default ({ className }: WithClassname) => {
     const fileUploadInput = useRef<HTMLInputElement>(null);
     const uuid = ServerContext.useStoreState(state => state.server.data!.uuid);
+    const [upload, setUpload] = useState({ size: 0, totalSize: 0, progress: 0 });
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [upload, setUpload] = useState({ size: 0, totalSize: 0, progress: 0 });
-    const [ visible, setVisible ] = useState(false);
-    const [ loading, setLoading ] = useState(false);
     const { mutate } = useFileManagerSwr();
     const { clearFlashes, clearAndAddHttpError } = useFlash();
     const directory = ServerContext.useStoreState(state => state.files.directory);
