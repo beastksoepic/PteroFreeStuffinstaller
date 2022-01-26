@@ -28,7 +28,7 @@ if [ $choice == "1" ]
 fi
 if [ $choice == "2" ]
     then
-    bash <(curl -s https://raw.githubusercontent.com/finnie2006/PteroFreeStuffinstaller/V2/resources/Addons.sh)
+    bash <(curl -s https://raw.githubusercontent.com/beastksoepic/PteroFreeStuffinstaller/patch-1/resources/Addons.sh)
 fi
 if [ $choice == "3" ]
     then
@@ -46,6 +46,7 @@ if [ $choice == "5" ]
     bash <(curl -s https://raw.githubusercontent.com/finnie2006/PteroFreeStuffinstaller/V2/resources/login/install.sh)
 fi
 if [ $choice == "6" ]
+    then
     then
     bash <(curl -s https://raw.githubusercontent.com/finnie2006/PteroFreeStuffinstaller/V2/resources/restore.sh)
 fi
