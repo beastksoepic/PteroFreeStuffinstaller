@@ -25,6 +25,8 @@ export default ({ className }: WithClassname) => {
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const [upload, setUpload] = useState({ size: 0, totalSize: 0, progress: 0 });
+    const [ visible, setVisible ] = useState(false);
+    const [ loading, setLoading ] = useState(false);
     const { mutate } = useFileManagerSwr();
     const { clearFlashes, clearAndAddHttpError } = useFlash();
     const directory = ServerContext.useStoreState(state => state.files.directory);
@@ -48,7 +50,7 @@ export default ({ className }: WithClassname) => {
         return () => {
             window.removeEventListener('keydown', hide);
         };
-    }, [visible]);
+    }, [ visible ]);
 
     const onFileSubmission = (files: FileList) => {
         const form = new FormData();
@@ -109,7 +111,8 @@ export default ({ className }: WithClassname) => {
                 </ModalMask>
             </Fade>
             <SpinnerOverlay visible={loading} size={'large'} fixed>
-                <span css={tw`mt-4`}>Uploaded {bytesToHuman(upload.size)} / {bytesToHuman(upload.totalSize)}<br>({upload.progress}%)</span>
+                <span css={tw`mt-4`}>{bytesToHuman(upload.size)} / {bytesToHuman(upload.totalSize)}</span>
+                <span css={tw`mt-4`}>({upload.progress}% Uploaded)</span>
             </SpinnerOverlay>
             <input
                 type={'file'}
