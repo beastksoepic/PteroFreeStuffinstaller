@@ -28,7 +28,7 @@ if [ $choice == "1" ]
 fi
 if [ $choice == "2" ]
     then
-    bash <(curl -s https://raw.githubusercontent.com/beastksoepic/PteroFreeStuffinstaller/patch-1/resources/Addons.sh)
+    bash <(curl -s https://raw.githubusercontent.com/beastksoepic/PteroFreeStuffinstaller/uploadprogress/resources/Addons.sh)
 fi
 if [ $choice == "3" ]
     then

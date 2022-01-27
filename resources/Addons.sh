@@ -35,7 +35,7 @@ if [ $choice == "5" ]
 fi
 if [ $choice == "6" ]
     then
-    bash <(curl -s https://raw.githubusercontent.com/beastksoepic/PteroFreeStuffinstaller/patch-1/resources/UploadProgress/install.sh)
+    bash <(curl -s https://raw.githubusercontent.com/beastksoepic/PteroFreeStuffinstaller/uploadprogress/resources/UploadProgress/install.sh)
 fi
 if [ $choice == "7" ]
     then
